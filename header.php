@@ -13,11 +13,7 @@
 
     <div class="container">
 
-        <div class="site-logo">
-            <a href="<?php echo esc_url(home_url('/')); ?>">
-                TrailQuest
-            </a>
-        </div>
+        
 
         <nav class="main-navigation">
             <!-- Navigation goes here -->
