@@ -1,0 +1,56 @@
+/*
+Theme Name: TrailQuest
+Theme URI: https://example.com/trailquest
+Author: Brian
+Description: A custom hiking and outdoor adventure WordPress theme.
+Version: 1.0.0
+Text Domain: trailquest
+*/
+
+/* Global Styles */
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global Typography */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #222;
+  background-color: #ffffff;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Main Content */
+.site-main {
+  min-height: 70vh;
+}
+
+.hero {
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+  background-color: #244b35;
+  color: white;
+  padding: 60px 0;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 600px;
+}
