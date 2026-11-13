@@ -1,16 +1,10 @@
 <?php get_header(); ?>
 
-<main class="site-main">
+     <?php get_template_part('template-parts/home/hero'); ?>
 
-    <section class="hero">
-        <div class="container">
-            <h1>Explore the Great Outdoors</h1>
-            <p>
-                Discover breathtaking trails
-                and unforgettable adventures.
-            </p>
-        </div>
-    </section>
+     <?php get_template_part('template-parts/home/about'); ?>
+
+     
     
     <div class="p-4 card-group">
         <?php
@@ -22,7 +16,5 @@
             }
         ?>
     </div>
-
-</main>
 
 <?php get_footer(); ?>

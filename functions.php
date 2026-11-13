@@ -10,14 +10,6 @@ function trailquest_enqueue_assets() {
         '5.3.8'
     );
 
-    // TrailQuest CSS
-    wp_enqueue_style(
-        'trailquest-style',
-        get_stylesheet_uri(),
-        array('bootstrap'),
-        wp_get_theme()->get('Version')
-    );
-
     // Bootstrap JavaScript
     wp_enqueue_script(
         'bootstrap-js',
@@ -25,6 +17,20 @@ function trailquest_enqueue_assets() {
         array(),
         '5.3.8',
         true
+    );
+
+    // Hero CSS
+    wp_enqueue_style(
+        'trailquest-hero',
+        get_template_directory_uri() . '/assets/css/hero.css',
+        array('bootstrap')
+    );
+
+    // About CSS
+    wp_enqueue_style(
+        'trailquest-about',
+        get_template_directory_uri() . '/assets/css/about.css',
+        array('bootstrap')
     );
 
 }

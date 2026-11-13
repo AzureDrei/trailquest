@@ -31,26 +31,5 @@ body {
   margin: 0 auto;
 }
 
-/* Main Content */
-.site-main {
-  min-height: 70vh;
-}
+/* HERO SECTION */
 
-.hero {
-  min-height: 450px;
-  display: flex;
-  align-items: center;
-  background-color: #244b35;
-  color: white;
-  padding: 60px 0;
-}
-
-.hero h1 {
-  font-size: 48px;
-  margin-bottom: 15px;
-}
-
-.hero p {
-  font-size: 18px;
-  max-width: 600px;
-}
