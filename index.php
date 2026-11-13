@@ -11,21 +11,17 @@
             </p>
         </div>
     </section>
- 
-    <?php
-        if(have_posts()){
-            while(have_posts()){
-                the_post();
-                ?>
-                    <h1><?php the_title()?></h1>
-                    <p><?php the_excerpt()?></p>
-                    <p><a href="<?php the_permalink()?>">read more..</a></p>
-                <?php
+    
+    <div class="p-4 card-group">
+        <?php
+            if(have_posts()){
+                while(have_posts()){
+                    the_post();
+                    get_template_part('template-parts/post');
+                }
             }
-        }
-
-    ?>
-
+        ?>
+    </div>
 
 </main>
 
