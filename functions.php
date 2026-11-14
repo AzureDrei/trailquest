@@ -19,6 +19,12 @@ function trailquest_enqueue_assets() {
         true
     );
 
+    wp_enqueue_style(
+        'trailquest-navbar',
+        get_template_directory_uri() . '/assets/css/header.css',
+        array('bootstrap')
+    );
+
     // Hero CSS
     wp_enqueue_style(
         'trailquest-hero',

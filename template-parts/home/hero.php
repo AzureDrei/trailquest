@@ -1,5 +1,5 @@
-<section class="hero-section">
-    <section class="hero-section"
+<section class="hero-section"
+    
     style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero.jpg'); ?>');">
     <div class="hero-overlay">
         <div class="container">

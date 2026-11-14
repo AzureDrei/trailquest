@@ -11,8 +11,16 @@
   max-width: 450px;
 }
 
-.about-section span {
-  font-size: 30px;
+.about-subtitle {
+  display: inline-block;
+  color: #214735;
+
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 3px;
+
+  padding: 5px 8px;
+  text-transform: uppercase;
 }
 
 .about-section p {

@@ -1,0 +1,42 @@
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.15));
+}
+
+.site-header .navbar {
+  padding: 20px 0;
+  background: transparent !important;
+}
+
+.site-header .navbar-brand,
+.site-header .nav-link {
+  color: #ffffff !important;
+}
+
+.site-header .navbar-brand {
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.site-header .nav-link {
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+.site-header .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.site-header .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* HERO OFFSET */
+
+.hero-section {
+  padding-top: 80px;
+}
