@@ -3,31 +3,16 @@
   background-color: #f7f7f2;
 }
 
-.about-heading {
-  margin-bottom: 45px;
-}
-
-.about-heading h2 {
-  font-size: clamp(30px, 4vw, 48px);
-  font-weight: 700;
-  letter-spacing: -1.5px;
-  color: #263b2e;
-  margin-bottom: 10px;
-}
-
-.about-heading span {
-  font-size: 12px;
-  letter-spacing: 3px;
-  font-weight: 600;
-  color: #64836d;
-}
-
 .about-section h3 {
   font-size: clamp(25px, 3vw, 36px);
   line-height: 1.3;
   font-weight: 500;
   color: #263b2e;
   max-width: 450px;
+}
+
+.about-section span {
+  font-size: 30px;
 }
 
 .about-section p {

@@ -1,6 +1,6 @@
 <section class="about-section">
     <div class="container">
-        <h2>A LIFE SHAPED BY MOVEMENT.</h2>
+        <span>A LIFE SHAPED BY MOVEMENT.</span>
         <div class="row">
             <div class="col-lg-6">
                 <h3>The world is waiting beyond the familiar.</h3>
