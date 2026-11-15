@@ -1,5 +1,16 @@
 <?php
 
+// Theme setup
+function trailquest_theme_setup() {
+    add_theme_support('title-tag');
+    add_theme_support('post-thumbnails');
+    add_theme_support('woocommerce');
+}
+
+add_action('after_setup_theme', 'trailquest_theme_setup');
+
+
+// Enqueue CSS and JavaScript
 function trailquest_enqueue_assets() {
 
     // Bootstrap CSS
@@ -19,6 +30,7 @@ function trailquest_enqueue_assets() {
         true
     );
 
+    // Navbar CSS
     wp_enqueue_style(
         'trailquest-navbar',
         get_template_directory_uri() . '/assets/css/header.css',
@@ -39,6 +51,11 @@ function trailquest_enqueue_assets() {
         array('bootstrap')
     );
 
+    wp_enqueue_style(
+        'trailquest-woocommerce',
+        get_template_directory_uri() . '/assets/css/woocommerce.css',
+        array('bootstrap')
+    );
 }
 
 add_action('wp_enqueue_scripts', 'trailquest_enqueue_assets');
