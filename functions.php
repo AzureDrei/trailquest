@@ -54,7 +54,8 @@ function trailquest_enqueue_assets() {
     wp_enqueue_style(
         'trailquest-woocommerce',
         get_template_directory_uri() . '/assets/css/woocommerce.css',
-        array('bootstrap')
+        array('bootstrap'),
+        '1.0.1'
     );
 }
 
