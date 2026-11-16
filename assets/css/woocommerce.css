@@ -1,0 +1,30 @@
+.trailquest-shop {
+  background-color: #f7f7f2;
+  min-height: 70vh;
+}
+
+.shop-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.shop-eyebrow {
+  color: #64836d;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.shop-title {
+  color: #214735;
+  font-size: clamp(36px, 5vw, 58px);
+  font-weight: 600;
+  margin: 16px 0;
+}
+
+.shop-description {
+  color: #777;
+  font-size: 16px;
+  line-height: 1.7;
+}
