@@ -7,6 +7,25 @@ function trailquest_theme_setup() {
     add_theme_support('woocommerce');
 }
 
+
+function trailquest_product_short_description() {
+    global $product;
+
+    $description = $product->get_short_description();
+
+    if ( ! empty($description) ) {
+        echo '<div class="trailquest-product-description">';
+        echo wp_kses_post($description);
+        echo '</div>';
+    }
+}
+
+add_action(
+    'woocommerce_after_shop_loop_item_title',
+    'trailquest_product_short_description',
+    9
+);
+
 add_action('after_setup_theme', 'trailquest_theme_setup');
 
 
@@ -55,7 +74,7 @@ function trailquest_enqueue_assets() {
         'trailquest-woocommerce',
         get_template_directory_uri() . '/assets/css/woocommerce.css',
         array('bootstrap'),
-        '1.0.1'
+        '1.0.2'
     );
 }
 
