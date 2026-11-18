@@ -1,17 +1,13 @@
 <?php get_header(); ?>
 
-<main class="trailquest-page container py-5">
+<main class="site-main trailquest-page container py-5">
 
     <?php
     while ( have_posts() ) :
         the_post();
+        the_content();
+    endwhile;
     ?>
-
-        <article <?php post_class(); ?>>
-            <?php the_content(); ?>
-        </article>
-
-    <?php endwhile; ?>
 
 </main>
 

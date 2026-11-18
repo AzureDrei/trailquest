@@ -22,6 +22,9 @@ body {
   line-height: 1.6;
   color: #222;
   background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Container */
@@ -33,3 +36,11 @@ body {
 
 /* HERO SECTION */
 
+html,
+body {
+  min-height: 100%;
+}
+
+.site-main {
+  flex: 1;
+}

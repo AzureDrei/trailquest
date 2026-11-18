@@ -9,8 +9,8 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-<header class="site-header">
-    <nav class="navbar navbar-expand-lg">
+<header class="site-header-default">
+    <nav class="navbar navbar-expand-lg site-navbar-default">
         <div class="container">
 
             <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
@@ -32,7 +32,7 @@
                         <a class="nav-link" href="#">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Shop</a>
+                        <a class="nav-link" href="<?php echo esc_url(wc_get_page_permalink('shop')); ?>">Shop</a>
                     </li>
                 </ul>
             </div>

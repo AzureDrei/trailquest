@@ -40,3 +40,39 @@
 .hero-section {
   padding-top: 80px;
 }
+
+/* REGULAR HEADER */
+
+.site-header-default {
+  position: relative;
+  width: 100%;
+  z-index: 1000;
+  background: #214735;
+}
+
+.site-navbar-default {
+  padding: 20px 0;
+}
+
+.site-header-default .navbar-brand,
+.site-header-default .nav-link {
+  color: #ffffff !important;
+}
+
+.site-header-default .navbar-brand {
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.site-header-default .nav-link {
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+.site-header-default .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.site-header-default .navbar-toggler-icon {
+  filter: invert(1);
+}
