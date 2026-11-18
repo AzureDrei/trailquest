@@ -74,7 +74,7 @@ function trailquest_enqueue_assets() {
         'trailquest-woocommerce',
         get_template_directory_uri() . '/assets/css/woocommerce.css',
         array('bootstrap'),
-        '1.0.2'
+        '1.0.3'
     );
 }
 

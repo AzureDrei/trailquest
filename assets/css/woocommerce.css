@@ -334,3 +334,55 @@
     grid-column: 1;
   }
 }
+
+/* ==========================
+   TRAILQUEST CART PAGE
+========================== */
+
+/* Cart page background */
+
+body.woocommerce-cart {
+  background-color: #f7f7f2;
+}
+
+body.woocommerce-cart .trailquest-page {
+  padding-top: 50px;
+  padding-bottom: 70px;
+}
+
+/* Cart table and content */
+
+body.woocommerce-cart .wc-block-cart {
+  background-color: #fffefa;
+  border-radius: 12px;
+  padding: 25px;
+}
+
+/* Checkout button */
+
+body.woocommerce-cart .wc-block-cart__submit-button {
+  background-color: #214735 !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 6px !important;
+  padding: 15px 25px !important;
+  transition: background-color 0.3s ease;
+}
+
+body.woocommerce-cart .wc-block-cart__submit-button:hover {
+  background-color: #365e45 !important;
+}
+
+/* Cart totals */
+
+body.woocommerce-cart .wc-block-components-totals-wrapper {
+  border-color: #e8e6dc;
+}
+
+/* Responsive spacing */
+
+@media (max-width: 768px) {
+  body.woocommerce-cart .wc-block-cart {
+    padding: 15px;
+  }
+}
