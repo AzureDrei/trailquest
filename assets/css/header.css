@@ -76,3 +76,21 @@
 .site-header-default .navbar-toggler-icon {
   filter: invert(1);
 }
+
+.site-header-default .navbar-nav {
+  gap: 12px;
+}
+
+.site-header-default .nav-link {
+  color: #ffffff !important;
+  transition: opacity 0.3s ease;
+}
+
+.site-header-default .nav-link:hover {
+  opacity: 0.7;
+}
+
+.site-header-default .cart-count {
+  font-size: 12px;
+  font-weight: 600;
+}

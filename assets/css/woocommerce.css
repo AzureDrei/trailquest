@@ -1,7 +1,13 @@
+/* =====================================
+   TRAILQUEST SHOP
+===================================== */
+
 .trailquest-shop {
   background-color: #f7f7f2;
   min-height: 70vh;
 }
+
+/* Shop heading */
 
 .shop-header {
   text-align: center;
@@ -30,10 +36,10 @@
 }
 
 /* =====================================
-   TRAILQUEST PRODUCT GRID
+   PRODUCT GRID
 ===================================== */
 
-.woocommerce ul.products {
+.trailquest-shop ul.products {
   display: grid !important;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 26px;
@@ -42,21 +48,19 @@
   padding: 0 !important;
 }
 
-/* Reset WooCommerce product widths */
-.woocommerce ul.products::before,
-.woocommerce ul.products::after {
+.trailquest-shop ul.products::before,
+.trailquest-shop ul.products::after {
   display: none !important;
   content: none !important;
 }
 
-.woocommerce ul.products li.product {
+/* Product cards */
+
+.trailquest-shop ul.products li.product {
   float: none !important;
   width: 100% !important;
   margin: 0 !important;
   padding: 0 0 18px !important;
-
-  display: flex;
-  flex-direction: column;
 
   background: #fffefa;
   border: 1px solid #e8e6dc;
@@ -70,15 +74,18 @@
     box-shadow 0.3s ease;
 }
 
-/* Card hover */
-.woocommerce ul.products li.product:hover {
+.trailquest-shop ul.products li.product:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(33, 71, 53, 0.12);
 }
 
-/* Product image */
-.woocommerce ul.products li.product a img {
+/* =====================================
+   PRODUCT IMAGE
+===================================== */
+
+.trailquest-shop ul.products li.product > a img {
   display: block;
+  grid-column: 1 / -1;
   width: 100%;
   height: 250px;
   object-fit: cover;
@@ -88,55 +95,88 @@
   transition: transform 0.4s ease;
 }
 
-/* Image zoom */
-.woocommerce ul.products li.product:hover a img {
+.trailquest-shop ul.products li.product:hover > a img {
   transform: scale(1.04);
 }
 
-/* Product title */
-.woocommerce ul.products li.product .woocommerce-loop-product__title {
+/* =====================================
+   PRODUCT TITLE AND PRICE
+===================================== */
+
+.trailquest-shop ul.products li.product > a.woocommerce-LoopProduct-link {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+}
+
+.trailquest-shop ul.products li.product .woocommerce-loop-product__title {
+  grid-column: 1;
+  margin: 0 !important;
+  padding: 0 0 0 18px !important;
+
   color: #214735;
   font-size: 19px;
   font-weight: 600;
-  padding: 0 16px;
-  margin: 0 0 10px;
 }
 
-/* Product price */
-.woocommerce ul.products li.product .price {
-  color: #214735;
+.trailquest-shop ul.products li.product .price {
+  grid-column: 2;
+  grid-row: 2;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 18px 0 8px !important;
+
+  color: #214735 !important;
   font-size: 17px;
   font-weight: 600;
-  padding: 0 16px;
-  margin-top: auto;
-  margin-bottom: 15px;
+  text-align: right;
+  align-self: start;
 }
 
-/* Add to cart */
-.woocommerce ul.products li.product .button {
-  align-self: flex-start;
-  margin: 0 16px !important;
-  padding: 12px 20px;
+/* =====================================
+   ADD TO CART BUTTON
+===================================== */
 
-  background: #214735;
+.trailquest-shop ul.products li.product .button {
+  align-self: flex-end !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+  padding: 0 !important;
+  margin: 10px 18px 0 !important;
+
+  font-size: 0 !important;
+  background-color: #214735;
   color: #ffffff;
 
-  border-radius: 7px;
-  font-weight: 600;
-
-  transition: background 0.3s ease;
+  border-radius: 8px;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
 }
 
-.woocommerce ul.products li.product .button:hover {
-  background: #64836d;
-  color: #ffffff;
+/* Shopping cart icon */
+.trailquest-shop ul.products li.product .button::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+
+  background-color: #ffffff;
+
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='9' cy='21' r='1'/%3E%3Ccircle cx='20' cy='21' r='1'/%3E%3Cpath d='M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6'/%3E%3C/svg%3E")
+    center / contain no-repeat;
+
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='9' cy='21' r='1'/%3E%3Ccircle cx='20' cy='21' r='1'/%3E%3Cpath d='M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6'/%3E%3C/svg%3E")
+    center / contain no-repeat;
 }
 
-.trailquest-product-description {
-  color: #777;
-  font-size: 0.85rem;
-
-  padding: 1rem 1.5rem 0.5rem 1.5rem;
+.trailquest-shop ul.products li.product .button:hover {
+  background-color: #64836d;
+  transform: translateY(-2px);
 }
 
 /* =====================================
@@ -144,311 +184,22 @@
 ===================================== */
 
 @media (max-width: 768px) {
-  .woocommerce ul.products {
+  .trailquest-shop ul.products {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 18px;
   }
 
-  .woocommerce ul.products li.product a img {
+  .trailquest-shop ul.products li.product > a img {
     height: 190px;
   }
 }
 
 @media (max-width: 480px) {
-  .woocommerce ul.products {
+  .trailquest-shop ul.products {
     grid-template-columns: 1fr;
   }
 
-  .woocommerce ul.products li.product a img {
+  .trailquest-shop ul.products li.product > a img {
     height: 230px;
-  }
-}
-
-/* ==========================
-   SINGLE PRODUCT PAGE
-========================== */
-
-.trailquest-single-product {
-  padding-top: 70px;
-  padding-bottom: 90px;
-}
-
-/* Main product layout */
-
-.trailquest-single-product .product {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  column-gap: 55px;
-  row-gap: 50px;
-  align-items: start;
-}
-
-/* Product gallery */
-
-.trailquest-single-product .woocommerce-product-gallery {
-  width: 100% !important;
-  float: none !important;
-}
-
-.trailquest-single-product .woocommerce-product-gallery img {
-  width: 100%;
-  border-radius: 12px;
-}
-
-.trailquest-single-product .woocommerce-product-gallery__wrapper {
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-/* Product information */
-
-.trailquest-single-product .summary {
-  width: 100% !important;
-  float: none !important;
-}
-
-.trailquest-single-product .product_title {
-  color: #214735;
-  font-size: 2.5rem;
-  font-weight: 600;
-  line-height: 1.2;
-  margin-bottom: 20px;
-}
-
-.trailquest-single-product .price {
-  color: #214735 !important;
-  font-size: 1.7rem !important;
-  font-weight: 600;
-  margin-bottom: 25px;
-}
-
-.trailquest-single-product .woocommerce-product-details__short-description {
-  color: #666;
-  font-size: 0.95rem;
-  line-height: 1.9;
-  margin-bottom: 30px;
-}
-
-/* Quantity selector */
-
-.trailquest-single-product .quantity input {
-  min-height: 48px;
-  border: 1px solid #e8e6dc;
-  border-radius: 6px;
-  padding: 10px;
-  background: #fffefa;
-}
-
-/* Add to cart */
-
-.trailquest-single-product .single_add_to_cart_button {
-  background-color: #214735 !important;
-  color: #fff !important;
-  border: none !important;
-  border-radius: 6px !important;
-  padding: 15px 30px !important;
-  font-weight: 500 !important;
-  transition: all 0.3s ease;
-}
-
-.trailquest-single-product .single_add_to_cart_button:hover {
-  background-color: #365e45 !important;
-  transform: translateY(-2px);
-}
-
-/* Product metadata */
-
-.trailquest-single-product .product_meta {
-  color: #777;
-  font-size: 0.85rem;
-  margin-top: 25px;
-}
-
-.trailquest-single-product .product_meta a {
-  color: #214735;
-}
-
-/* Description and reviews */
-
-.trailquest-single-product .woocommerce-tabs {
-  grid-column: 1 / -1;
-  width: 100%;
-  margin-top: 10px;
-}
-
-.trailquest-single-product .woocommerce-tabs ul.tabs {
-  border-bottom: 1px solid #e8e6dc;
-  padding-left: 0;
-}
-
-.trailquest-single-product .woocommerce-tabs ul.tabs li {
-  background: transparent;
-  border: none;
-  border-radius: 0;
-  margin-right: 20px;
-}
-
-.trailquest-single-product .woocommerce-tabs ul.tabs li a {
-  color: #777;
-  font-weight: 500;
-}
-
-.trailquest-single-product .woocommerce-tabs ul.tabs li.active a {
-  color: #214735;
-}
-
-.trailquest-single-product .woocommerce-Tabs-panel {
-  color: #555;
-  line-height: 1.9;
-}
-
-/* Related products */
-
-.trailquest-single-product .related {
-  grid-column: 1 / -1;
-  width: 100%;
-  margin-top: 15px;
-}
-
-.trailquest-single-product .related > h2 {
-  color: #214735;
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin-bottom: 30px;
-}
-
-/* Responsive layout */
-
-@media (max-width: 768px) {
-  .trailquest-single-product .product {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .trailquest-single-product .product_title {
-    font-size: 2rem;
-  }
-
-  .trailquest-single-product .woocommerce-tabs,
-  .trailquest-single-product .related {
-    grid-column: 1;
-  }
-}
-
-/* ==========================
-   TRAILQUEST CART PAGE
-========================== */
-
-/* Cart page background */
-
-body.woocommerce-cart {
-  background-color: #f7f7f2;
-}
-
-body.woocommerce-cart .trailquest-page {
-  padding-top: 50px;
-  padding-bottom: 70px;
-}
-
-/* Cart table and content */
-
-body.woocommerce-cart .wc-block-cart {
-  background-color: #fffefa;
-  border-radius: 12px;
-  padding: 25px;
-}
-
-/* Checkout button */
-
-body.woocommerce-cart .wc-block-cart__submit-button {
-  background-color: #214735 !important;
-  color: #fff !important;
-  border: none !important;
-  border-radius: 6px !important;
-  padding: 15px 25px !important;
-  transition: background-color 0.3s ease;
-}
-
-body.woocommerce-cart .wc-block-cart__submit-button:hover {
-  background-color: #365e45 !important;
-}
-
-/* Cart totals */
-
-body.woocommerce-cart .wc-block-components-totals-wrapper {
-  border-color: #e8e6dc;
-}
-
-/* Responsive spacing */
-
-@media (max-width: 768px) {
-  body.woocommerce-cart .wc-block-cart {
-    padding: 15px;
-  }
-}
-
-/* ==========================
-   TRAILQUEST CHECKOUT PAGE
-========================== */
-
-body.woocommerce-checkout {
-  background-color: #f7f7f2;
-}
-
-body.woocommerce-checkout .trailquest-page {
-  padding-top: 50px;
-  padding-bottom: 80px;
-}
-
-/* Checkout container */
-
-body.woocommerce-checkout .wc-block-checkout {
-  background: #fffefa;
-  padding: 30px;
-  border-radius: 12px;
-}
-
-/* Section headings */
-
-body.woocommerce-checkout .wc-block-components-title {
-  color: #214735;
-  font-weight: 600;
-}
-
-/* Input fields */
-
-body.woocommerce-checkout .wc-block-components-text-input input,
-body.woocommerce-checkout
-  .wc-block-components-combobox
-  .components-combobox-control__input,
-body.woocommerce-checkout .wc-block-components-address-form input {
-  border-radius: 6px;
-  border-color: #e8e6dc;
-}
-
-/* Checkout buttons */
-
-body.woocommerce-checkout .wc-block-components-button {
-  background-color: #214735 !important;
-  color: #ffffff !important;
-  border-radius: 6px !important;
-  transition: background-color 0.3s ease;
-}
-
-body.woocommerce-checkout .wc-block-components-button:hover {
-  background-color: #365e45 !important;
-}
-
-/* Order summary borders */
-
-body.woocommerce-checkout .wc-block-components-totals-wrapper {
-  border-color: #e8e6dc;
-}
-
-/* Mobile */
-
-@media (max-width: 768px) {
-  body.woocommerce-checkout .wc-block-checkout {
-    padding: 15px;
   }
 }

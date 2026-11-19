@@ -1,0 +1,65 @@
+/* ==========================
+   TRAILQUEST CHECKOUT PAGE
+========================== */
+
+body.woocommerce-checkout {
+  background-color: #f7f7f2;
+}
+
+body.woocommerce-checkout .trailquest-page {
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+
+/* Checkout container */
+
+body.woocommerce-checkout .wc-block-checkout {
+  background: #fffefa;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+/* Section headings */
+
+body.woocommerce-checkout .wc-block-components-title {
+  color: #214735;
+  font-weight: 600;
+}
+
+/* Input fields */
+
+body.woocommerce-checkout .wc-block-components-text-input input,
+body.woocommerce-checkout
+  .wc-block-components-combobox
+  .components-combobox-control__input,
+body.woocommerce-checkout .wc-block-components-address-form input {
+  border-radius: 6px;
+  border-color: #e8e6dc;
+}
+
+/* Checkout buttons */
+
+body.woocommerce-checkout .wc-block-components-button {
+  background-color: #214735 !important;
+  color: #ffffff !important;
+  border-radius: 6px !important;
+  transition: background-color 0.3s ease;
+}
+
+body.woocommerce-checkout .wc-block-components-button:hover {
+  background-color: #365e45 !important;
+}
+
+/* Order summary borders */
+
+body.woocommerce-checkout .wc-block-components-totals-wrapper {
+  border-color: #e8e6dc;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  body.woocommerce-checkout .wc-block-checkout {
+    padding: 15px;
+  }
+}

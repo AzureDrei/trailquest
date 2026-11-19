@@ -32,8 +32,30 @@
                         <a class="nav-link" href="#">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Shop</a>
+                        <a class="nav-link" href="<?php
+                            echo esc_url(
+                                function_exists('wc_get_page_permalink')
+                                    ? wc_get_page_permalink('shop')
+                                    : home_url('/shop/')
+                            );
+                        ?>">
+                            Shop
+                        </a>
                     </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php
+                            echo esc_url(
+                                function_exists('wc_get_page_permalink')
+                                    ? wc_get_page_permalink('myaccount')
+                                    : home_url('/my-account/')
+                            );
+                        ?>">
+                            Login
+                        </a>
+                    </li>
+
+                    
                 </ul>
             </div>
 

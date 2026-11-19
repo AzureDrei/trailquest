@@ -8,23 +8,6 @@ function trailquest_theme_setup() {
 }
 
 
-function trailquest_product_short_description() {
-    global $product;
-
-    $description = $product->get_short_description();
-
-    if ( ! empty($description) ) {
-        echo '<div class="trailquest-product-description">';
-        echo wp_kses_post($description);
-        echo '</div>';
-    }
-}
-
-add_action(
-    'woocommerce_after_shop_loop_item_title',
-    'trailquest_product_short_description',
-    9
-);
 
 add_action('after_setup_theme', 'trailquest_theme_setup');
 
@@ -74,8 +57,37 @@ function trailquest_enqueue_assets() {
         'trailquest-woocommerce',
         get_template_directory_uri() . '/assets/css/woocommerce.css',
         array('bootstrap'),
-        '1.0.4'
+        '1.0.7'
     );
+
+    wp_enqueue_style(
+        'trailquest-woocommerce-single-page',
+        get_template_directory_uri() . '/assets/css/woocommerce-singleprod.css',
+        array('bootstrap'),
+
+    );
+
+    wp_enqueue_style(
+        'trailquest-woocommerce-cart',
+        get_template_directory_uri() . '/assets/css/woocommerce-cart.css',
+        array('bootstrap'),
+
+    );
+
+    wp_enqueue_style(
+        'trailquest-woocommerce-checkout',
+        get_template_directory_uri() . '/assets/css/woocommerce-checkout.css',
+        array('bootstrap'),
+
+    );
+
+    wp_enqueue_style(
+        'trailquest-woocommerce-account',
+        get_template_directory_uri() . '/assets/css/woocommerce-account.css',
+        array('bootstrap'),
+
+    );
+
 }
 
 add_action('wp_enqueue_scripts', 'trailquest_enqueue_assets');

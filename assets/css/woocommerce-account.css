@@ -1,0 +1,93 @@
+/* ==========================
+   TRAILQUEST MY ACCOUNT
+========================== */
+
+body.woocommerce-account {
+  background-color: #f7f7f2;
+}
+
+body.woocommerce-account .trailquest-page {
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+/* Account container */
+
+body.woocommerce-account .woocommerce {
+  background: #fffefa;
+  padding: 35px;
+  border-radius: 12px;
+}
+
+/* Navigation */
+
+body.woocommerce-account .woocommerce-MyAccount-navigation {
+  width: 25%;
+}
+
+body.woocommerce-account .woocommerce-MyAccount-navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+body.woocommerce-account .woocommerce-MyAccount-navigation li {
+  border-bottom: 1px solid #e8e6dc;
+}
+
+body.woocommerce-account .woocommerce-MyAccount-navigation a {
+  display: block;
+  padding: 14px;
+  color: #214735;
+  text-decoration: none;
+}
+
+body.woocommerce-account .woocommerce-MyAccount-navigation li.is-active a {
+  background: #214735;
+  color: #ffffff;
+  border-radius: 6px;
+}
+
+/* Account content */
+
+body.woocommerce-account .woocommerce-MyAccount-content {
+  width: 72%;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* Form fields */
+
+body.woocommerce-account input.input-text {
+  border: 1px solid #e8e6dc;
+  border-radius: 6px;
+  padding: 12px;
+}
+
+/* Buttons */
+
+body.woocommerce-account button.button,
+body.woocommerce-account input.button {
+  background: #214735 !important;
+  color: #ffffff !important;
+  border-radius: 6px !important;
+  padding: 13px 25px !important;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  body.woocommerce-account .woocommerce {
+    padding: 18px;
+  }
+
+  body.woocommerce-account .woocommerce-MyAccount-navigation,
+  body.woocommerce-account .woocommerce-MyAccount-content {
+    width: 100%;
+    float: none;
+  }
+
+  body.woocommerce-account .woocommerce-MyAccount-content {
+    margin-top: 30px;
+  }
+}
