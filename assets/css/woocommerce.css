@@ -203,3 +203,106 @@
     height: 230px;
   }
 }
+
+/* =====================================
+   TRAILQUEST SHOP PAGINATION
+===================================== */
+
+.trailquest-shop .woocommerce-pagination {
+  margin: 40px 0 20px;
+}
+
+.trailquest-shop .woocommerce-pagination ul {
+  display: flex !important;
+  justify-content: center;
+  gap: 10px;
+  border: none !important;
+}
+
+.trailquest-shop .woocommerce-pagination ul li {
+  border: none !important;
+}
+
+.trailquest-shop .woocommerce-pagination ul li a,
+.trailquest-shop .woocommerce-pagination ul li span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  height: 42px;
+  padding: 0 12px;
+
+  color: #214735;
+  background: #fffefa;
+  border: 1px solid #e8e6dc;
+  border-radius: 7px;
+}
+
+.trailquest-shop .woocommerce-pagination ul li span.current,
+.trailquest-shop .woocommerce-pagination ul li a:hover {
+  background: #214735;
+  color: #ffffff;
+  border-color: #214735;
+}
+
+/* SHOP CATEGORY NAVIGATION */
+
+.trailquest-category-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 25px 0;
+}
+
+.trailquest-category-nav a {
+  padding: 10px 20px;
+  border: 1px solid #e8e6dc;
+  border-radius: 30px;
+
+  color: #214735;
+  background: #fffefa;
+
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+.trailquest-category-nav a:hover {
+  background: #214735;
+  color: #ffffff;
+  border-color: #214735;
+}
+
+/* SHOP CATEGORY NAVIGATION */
+
+.trailquest-category-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 25px 0;
+}
+
+.trailquest-category-nav a {
+  padding: 10px 20px;
+  border: 1px solid #e8e6dc;
+  border-radius: 30px;
+
+  color: #214735;
+  background: #fffefa;
+
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+.trailquest-category-nav a:hover {
+  background: #214735;
+  color: #ffffff;
+  border-color: #214735;
+}

@@ -7,9 +7,11 @@ function trailquest_theme_setup() {
     add_theme_support('woocommerce');
 }
 
-
-
 add_action('after_setup_theme', 'trailquest_theme_setup');
+
+add_filter('loop_shop_per_page', function($products) {
+    return 6;
+}, 20);
 
 
 // Enqueue CSS and JavaScript
@@ -57,7 +59,7 @@ function trailquest_enqueue_assets() {
         'trailquest-woocommerce',
         get_template_directory_uri() . '/assets/css/woocommerce.css',
         array('bootstrap'),
-        '1.0.7'
+        '1.0.9'
     );
 
     wp_enqueue_style(
