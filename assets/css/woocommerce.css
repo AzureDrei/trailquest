@@ -306,3 +306,9 @@
   color: #ffffff;
   border-color: #214735;
 }
+
+.trailquest-category-nav a.active {
+  background: #214735;
+  color: #ffffff;
+  border-color: #214735;
+}

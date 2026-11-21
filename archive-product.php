@@ -45,7 +45,10 @@ get_header();
 
                 foreach ($categories as $category) {
 
-                    echo '<a href="' . esc_url(get_term_link($category)) . '">';
+                    $is_active = is_product_category($category->slug);
+
+                    echo '<a class="' . ($is_active ? 'active' : '') . '"
+                        href="' . esc_url(get_term_link($category)) . '">';
                     echo esc_html($category->name);
                     echo '</a>';
 
