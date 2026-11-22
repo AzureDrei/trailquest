@@ -4,4 +4,6 @@
 
 <?php get_template_part('template-parts/home/about'); ?>
 
+<?php get_template_part('template-parts/home/featured-products'); ?>
+
 <?php get_footer(); ?>
