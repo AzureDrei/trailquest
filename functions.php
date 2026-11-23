@@ -56,10 +56,17 @@ function trailquest_enqueue_assets() {
     );
 
     wp_enqueue_style(
+        'trailquest-featured-products',
+        get_template_directory_uri() . '/assets/css/featured-products.css',
+        array('bootstrap'),
+
+    );
+
+    wp_enqueue_style(
         'trailquest-woocommerce',
         get_template_directory_uri() . '/assets/css/woocommerce.css',
         array('bootstrap'),
-        '1.0.9'
+        '1.0.10'
     );
 
     wp_enqueue_style(
