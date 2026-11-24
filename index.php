@@ -1,3 +1,5 @@
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <?php get_header('home'); ?>
 
 <?php get_template_part('template-parts/home/hero'); ?>
