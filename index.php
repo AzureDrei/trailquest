@@ -8,4 +8,7 @@
 
 <?php get_template_part('template-parts/home/featured-products'); ?>
 
+<?php get_template_part('template-parts/home/featured-destination'); ?>
+
+
 <?php get_footer(); ?>
