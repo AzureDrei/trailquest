@@ -63,6 +63,13 @@ function trailquest_enqueue_assets() {
     );
 
     wp_enqueue_style(
+        'trailquest-featured-destination',
+        get_template_directory_uri() . '/assets/css/featured-destination.css',
+        array('bootstrap'),
+        '1.0.0'
+    );
+
+    wp_enqueue_style(
         'trailquest-woocommerce',
         get_template_directory_uri() . '/assets/css/woocommerce.css',
         array('bootstrap'),

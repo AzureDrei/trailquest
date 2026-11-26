@@ -1,0 +1,122 @@
+.featured-destination-section {
+  background-color: #f7f7f2;
+  padding: 110px 0;
+}
+
+/* Destination Image */
+
+.featured-destination-image {
+  width: 100%;
+  height: 480px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.featured-destination-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s ease;
+}
+
+.featured-destination-image:hover img {
+  transform: scale(1.04);
+}
+
+/* Destination Content */
+
+.featured-destination-content {
+  max-width: 480px;
+  padding: 20px 0;
+}
+
+.featured-destination-subtitle {
+  display: block;
+  color: #64836d;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.featured-destination-content h2 {
+  color: #214735;
+  font-size: clamp(32px, 4vw, 46px);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 22px;
+}
+
+.featured-destination-content p {
+  color: #777;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+/* Destination Link */
+
+.featured-destination-link {
+  display: inline-block;
+  color: #214735;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #214735;
+  transition: all 0.3s ease;
+}
+
+.featured-destination-link:hover {
+  color: #64836d;
+  border-color: #64836d;
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 991px) {
+  .featured-destination-section {
+    padding: 80px 0;
+  }
+
+  .featured-destination-image {
+    height: 400px;
+  }
+
+  .featured-destination-content {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .featured-destination-section {
+    padding: 65px 0;
+  }
+
+  .featured-destination-image {
+    height: 320px;
+  }
+
+  .featured-destination-content {
+    padding: 0;
+  }
+
+  .featured-destination-subtitle {
+    margin-bottom: 14px;
+  }
+
+  .featured-destination-content h2 {
+    font-size: 29px;
+    margin-bottom: 16px;
+  }
+
+  .featured-destination-content p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 22px;
+  }
+}
